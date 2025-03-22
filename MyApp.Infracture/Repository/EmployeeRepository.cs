@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyApp.Application;
 using MyApp.Core.Entities;
-using MyApp.Core.Interface;
 using MyApp.Infracture.Data;
 
 namespace MyApp.Infracture.Repository

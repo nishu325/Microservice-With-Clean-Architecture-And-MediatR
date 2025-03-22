@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using MyApp.Core.Interface;
 using MyApp.Core.Models;
 
 namespace MyApp.Application.Queries

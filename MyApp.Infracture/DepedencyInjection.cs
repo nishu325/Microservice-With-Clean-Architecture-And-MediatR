@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using MyApp.Core.Interface;
+using MyApp.Application;
 using MyApp.Core.Options;
 using MyApp.Infracture.Data;
 using MyApp.Infracture.Repository;
@@ -17,7 +17,7 @@ namespace MyApp.Infracture
         {
             service.AddDbContext<AppDbContext>((provider, options) =>
             {
-                options.UseSqlServer(provider.GetRequiredService<IOptionsSnapshot<ConnectionStringOptions>>().Value.DefaultConnection);
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
             service.AddScoped<IEmployeeRepository, EmployeeRepository>();
