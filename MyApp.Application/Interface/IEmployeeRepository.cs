@@ -9,6 +9,7 @@ namespace MyApp.Application
 {
     public interface IEmployeeRepository
     {
+        // comment
         Task<IEnumerable<EmployeeEntity>> GetEmployees();
         Task<EmployeeEntity> GetEmployeeById(Guid id);
         Task<EmployeeEntity> AddEmployeeAsync(EmployeeEntity employee);
