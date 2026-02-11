@@ -11,6 +11,7 @@ namespace MyApp.API.Controllers
     [ApiController]
     public class EmployeeController(ISender sender) : ControllerBase
     {
+        // Add new employee data
         [HttpPost("AddNewEmployee")]
         public async Task<IActionResult> AddEmployees([FromBody] EmployeeEntity employee)
         {
